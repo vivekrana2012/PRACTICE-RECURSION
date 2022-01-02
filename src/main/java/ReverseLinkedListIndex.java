@@ -2,12 +2,12 @@ public class ReverseLinkedListIndex {
 
     public static void main(String[] args) {
 
-        Node node1 = new Node("a");
-        Node node2 = new Node("b");
-        Node node3 = new Node("c");
-        Node node4 = new Node("d");
-        Node node5 = new Node("e");
-        Node node6 = new Node("f");
+        LinkedListNode node1 = new LinkedListNode("a");
+        LinkedListNode node2 = new LinkedListNode("b");
+        LinkedListNode node3 = new LinkedListNode("c");
+        LinkedListNode node4 = new LinkedListNode("d");
+        LinkedListNode node5 = new LinkedListNode("e");
+        LinkedListNode node6 = new LinkedListNode("f");
 
         node1.setNext(node2);
         node2.setNext(node3);
@@ -24,7 +24,7 @@ public class ReverseLinkedListIndex {
         printList(node6);
     }
 
-    private static void reverseList(Node node) {
+    private static void reverseList(LinkedListNode node) {
 
         if (node.getNext() == null) {
             return;
@@ -36,7 +36,7 @@ public class ReverseLinkedListIndex {
     }
 
 
-    private static void printList(Node node) {
+    private static void printList(LinkedListNode node) {
 
         if (node.getNext() == null) {
             System.out.print(node.getData());
@@ -48,16 +48,16 @@ public class ReverseLinkedListIndex {
     }
 }
 
-class Node {
+class LinkedListNode implements Node {
 
     private String data;
-    private Node next;
+    private LinkedListNode next;
 
-    public Node(String data) {
+    public LinkedListNode(String data) {
         this.data = data;
     }
 
-    public void setNext(Node next) {
+    public void setNext(LinkedListNode next) {
         this.next = next;
     }
 
@@ -65,7 +65,7 @@ class Node {
         return data;
     }
 
-    public Node getNext() {
+    public LinkedListNode getNext() {
         return next;
     }
 }
