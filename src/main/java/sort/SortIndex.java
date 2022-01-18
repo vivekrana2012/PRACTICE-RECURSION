@@ -3,7 +3,7 @@ package sort;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class QuickSortIndex {
+public class SortIndex {
 
     public static void main(String[] args) {
 
@@ -23,8 +23,8 @@ public class QuickSortIndex {
             arr[i] = num;
         }
 
-        QuickSort quickSort = new QuickSort();
-        quickSort.sort(arr);
+        Sort sort = new MergeSort();
+        sort.sort(arr);
 
         Arrays.stream(arr).forEach(System.out::println);
     }
